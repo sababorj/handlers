@@ -1,0 +1,12 @@
+<h1> Wish Saver</h1>
+
+<h3>Save your wishes</h3>
+
+<ul>
+    {{#each wishes}}
+    <li>
+        <p>ID: {{this.id}}</p>
+        <p>Wish: {{ this.wish }} </p>
+    </li>
+    {{/each}}
+</ul>
