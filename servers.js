@@ -35,7 +35,12 @@ app.get("/", (req, res)=> {
     });
 });
 
-
+app.post("/", (req,res) => {
+    connection.query("INSERT INTO wishes (wish) VALUES (?);",[req.body.wish], (err, respo) => {
+        if(err) throw err
+        res.redirect("/")
+    })
+})
 
 app.listen(port, ()=> {
     console.log("I am listening to you dude")
